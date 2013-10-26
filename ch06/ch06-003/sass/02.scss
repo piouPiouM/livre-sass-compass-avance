@@ -1,0 +1,26 @@
+// Exemple 2 : supprimer la répétition des dimensions
+// ==================================================
+// (page 214)
+
+@import "compass";
+
+$icons_02-sprite-base-class: '%icons_02';
+@import "icons-02/*.png";
+
+%icons_02 {
+  @include inline-block;
+
+  // Nous savons que toutes les images de la sprite map ont les
+  // mêmes dimensions. Il suffit donc de déclarer les propriétés CSS
+  // `height` et `width`d'une des images depuis le placeholder qui fait
+  // office de classe de base pour que toutes en bénéficies.
+  @include icons_02-sprite-dimensions('arrow_up');
+}
+
+// Comme nous n'avons pas défini à true la variable
+// `$icons_02-sprite-dimensions`, Compass ajoute uniquement les
+// positions de chacune des sprites.
+.top    { @include icons_02-sprite('arrow_up'); }
+.next   { @include icons_02-sprite('arrow_right'); }
+.bottom { @include icons_02-sprite('arrow_down'); }
+.prev, a.back { @include icons_02-sprite('arrow_left'); }

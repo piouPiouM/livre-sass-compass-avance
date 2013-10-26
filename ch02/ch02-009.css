@@ -1,0 +1,11 @@
+ul.inline {
+  list-style-type: none;
+}
+ul.inline, ul.inline li {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+#top ul.inline, #top ul.inline li {
+  color: red;
+}

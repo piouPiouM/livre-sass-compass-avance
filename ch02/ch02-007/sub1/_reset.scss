@@ -1,0 +1,9 @@
+/*!
+ * Chargement du partial sub1/_reset.scss
+ */
+// Les fichiers _foo.scss et _bar.scss se situent dans un répertoire
+// enfant au présent fichier (_reset.scss). Nous indiquons donc le
+// sous-répertoire uniquement et non le chemin complet depuis le fichier
+// source du projet (ch02-007.scss) à savoir "sub1/sub2/".
+@import "sub2/foo",
+        "sub2/bar";

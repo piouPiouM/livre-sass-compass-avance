@@ -1,0 +1,25 @@
+.radial-gradient {
+  background: -moz-radial-gradient(ellipse at center top, #008000, #0000ff);
+  background: -o-radial-gradient(ellipse at center top, #008000, #0000ff);
+  background: -webkit-radial-gradient(ellipse at center top, #008000, #0000ff);
+  background: radial-gradient(ellipse at center top, #008000, #0000ff);
+}
+
+.multiple-backgrounds {
+  display: block;
+  width: 408px;
+  height: 287px;
+  background: -moz-radial-gradient(ellipse, rgba(255, 255, 255, 0), #ffffff), url('../img/kitten.jpg?1382793188');
+  background: -o-radial-gradient(ellipse, rgba(255, 255, 255, 0), #ffffff), url('../img/kitten.jpg?1382793188');
+  background: -webkit-radial-gradient(ellipse, rgba(255, 255, 255, 0), #ffffff), url('../img/kitten.jpg?1382793188');
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0), #ffffff), url('../img/kitten.jpg?1382793188');
+}
+
+.linear-gradient {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFA9E4F7', endColorstr='#FF0FB4E7');
+  background: -moz-linear-gradient(#a9e4f7, #0fb4e7);
+  background: -o-linear-gradient(#a9e4f7, #0fb4e7);
+  background: -webkit-linear-gradient(#a9e4f7, #0fb4e7);
+  background: linear-gradient(#a9e4f7, #0fb4e7);
+}

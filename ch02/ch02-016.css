@@ -1,0 +1,18 @@
+.row, .row-separator_plain, .row-separator {
+  padding: 3px 15px;
+}
+.row > :first-child, .row-separator_plain > :first-child, .row-separator > :first-child {
+  margin-top: 0;
+}
+
+.row-separator_plain, .row-separator {
+  border: 0 dotted #000;
+  border-width: 1px 0;
+}
+.row-separator_plain + .row-separator_plain, .row-separator + .row-separator_plain, .row-separator_plain + .row-separator, .row-separator + .row-separator {
+  border-top-width: 0;
+}
+
+.row-separator_plain {
+  border-style: solid;
+}

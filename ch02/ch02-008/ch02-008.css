@@ -1,0 +1,11 @@
+.message {
+  padding: 8px 35px 8px 14px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.message .info {
+  background-color: #d9edf7;
+  border: 1px solid #dce8f1;
+}
+.message h3 {
+  color: #dce8f1;
+}

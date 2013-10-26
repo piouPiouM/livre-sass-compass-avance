@@ -1,0 +1,32 @@
+// Exemple 4 : déclarer les dimensions des sprites par taille d’image
+// ==================================================================
+// (page 221)
+
+@import "compass";
+// Nous importons un partial où est déclaré le mixin
+// x-sprites-dimensions utilisé en fin de fichier.
+@import "x-sprites-dimensions";
+
+// Les dimensions seront gérées par le mixin x-sprites-dimensions.
+$icons-sprite-dimensions: false;
+$icons-sprite-base-class: '%icons_base';
+$icons-layout: smart;
+@import "icons/*.png";
+@include all-icons-sprites;
+
+// Rappel : à ce niveau et parce que nous avons eu recours à la création
+// automatisée des sprites CSS, nous avons à disposition la variable
+// $<map>-sprites instanciée par Compass.
+
+[class*=" #{sprite-map-name($icons-sprites)}-"],
+[class^="#{sprite-map-name($icons-sprites)}-"] {
+  @include hide-text;
+  display: block;
+}
+
+// Nous regroupons les classes des sprites par dimensions d'images.
+/*!
+ * Les dimensions des sprites sont bien regroupées selon les trois
+ * différentes tailles d’images dont nous disposions.
+ */
+@include x-sprites-dimensions($icons-sprites);

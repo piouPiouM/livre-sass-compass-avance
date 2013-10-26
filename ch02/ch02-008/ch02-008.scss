@@ -1,0 +1,42 @@
+// Portée des variables et partials
+// ================================
+// (page 51)
+//
+// Instructions :
+// 1. Lancez une première fois la compilation normalement :
+//       $ cd ch02-008/
+//       $ sass -t expanded ch02-008.scss ch02-008.css
+// 2. Lire la feuille de styles compilée.
+// 3. Éditez la variable `$new_context` pour lui donner la valeur `true`,
+//    puis relancez la compilation du fichier.
+// 4. Notez qu'une erreur est générée par Sass.
+
+$new_context: false;
+
+// Contexte local initial dans lequel est importé la feuille de styles
+// partielle "_info.scss".
+.message {
+  padding: 8px 35px 8px 14px;
+  @import "info";
+  // La variable globale "$info-font-family" déclarée dans le
+  // partial "_info.scss" est accessible dans la règle CSS
+  // où s'effectue l'importation du fichier.
+  font-family: $info-font-family;
+
+  // Création d'une règle imbriquée. Les variables globales
+  // du partial "_info.scss" sont toujours accessibles.
+  h3 {
+    color: $info-color2;
+  }
+}
+
+@if $new_context {
+  // Création d'un nouveau contexte local à l'aide d'une nouvelle règle de
+  // propriété CSS.
+  // Il est désormais impossible d'accéder à la variable 
+  // "$info-font-family" depuis ce nouveau contexte. Sass génère une
+  // erreur "Undefined variable" lors de la compilation.
+  .new_context {
+    font-family: $info-font-family;
+  }
+}

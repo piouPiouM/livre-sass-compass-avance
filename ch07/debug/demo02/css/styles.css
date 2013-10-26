@@ -1,0 +1,54 @@
+/*
+Syntax error: File to import not found or unreadable: foundation.
+              Load paths:
+                /Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug
+                /Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/sass
+        on line 1 of sass/styles.scss
+
+1: @import "foundation";
+
+Backtrace:
+sass/styles.scss:1
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/import_node.rb:67:in `import'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/import_node.rb:28:in `imported_file'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/import_node.rb:37:in `css_import?'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/visitors/perform.rb:217:in `visit_import'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `map'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/visitors/perform.rb:109:in `visit_children'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/visitors/perform.rb:128:in `visit_root'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `send'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/visitors/base.rb:37:in `visit'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/visitors/perform.rb:100:in `visit'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `send'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/visitors/perform.rb:7:in `visit'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/tree/root_node.rb:20:in `render'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/engine.rb:315:in `_render'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/engine.rb:262:in `render'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/plugin/compiler.rb:362:in `update_stylesheet'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/plugin/compiler.rb:203:in `update_stylesheets'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/plugin/compiler.rb:201:in `each'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/plugin/compiler.rb:235:in `watch'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/plugin.rb:107:in `send'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/plugin.rb:107:in `method_missing'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/exec.rb:455:in `watch_or_update'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/exec.rb:318:in `process_result'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/exec.rb:41:in `parse'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/../lib/sass/../sass/exec.rb:21:in `parse!'
+/Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/vendors/bundle/ruby/1.8/gems/sass-3.2.10/bin/sass:9
+/usr/bin/sass:19:in `load'
+/usr/bin/sass:19
+/usr/bin/ruby_noexec_wrapper:14
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: foundation.\A               Load paths:\A                 /Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug\A                 /Users/mehdi/Dropbox/Livre_Sass_et_Compass/work/code/ch07/debug/sass\A         on line 1 of sass/styles.scss\A \A 1: @import \"foundation\";"; }

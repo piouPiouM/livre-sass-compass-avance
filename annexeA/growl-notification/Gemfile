@@ -1,0 +1,5 @@
+source "https://rubygems.org"
+
+gem "compass"
+gem "oily_png"
+gem "ruby_gntp", "~> 0.3.4"

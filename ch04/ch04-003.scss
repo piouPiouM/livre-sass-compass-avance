@@ -1,0 +1,121 @@
+// Un module réutilisable
+// ======================
+// (page 139)
+
+// Module de bouton
+// ----------------
+$btn-function-factor:  10%      !default;
+$btn-disabled-opacity: .6       !default;
+$btn-margin:           0 0 20px !default;
+$btn-radius:           5px      !default;
+
+$btn-border_style: solid !default;
+$btn-border_width: 1px   !default;
+
+$btn-font_align:     center  !default;
+$btn-font_color:     #fff    !default;
+$btn-font_color_alt: #333    !default;
+$btn-font_family:    inherit !default;
+$btn-font_weight:    bold    !default;
+
+$btn-medium-padding:   12px !default;
+$btn-medium-font_size: 1em  !default;
+$btn-large-padding:    $btn-medium-padding +
+                       $btn-medium-padding * 1/3 !default;
+$btn-large-font_size:  1.25em !default;
+
+$btn-default-bg_color: #2ba6cb !default;
+$btn-success-bg_color: #5da423 !default;
+
+@mixin btn-style($bg: $btn-default-bg_color, $radius: true) {
+  background-color: $bg;
+  border-color: darken($bg, $btn-function-factor);
+
+  &:hover, &:focus {
+    background-color: darken($bg, $btn-function-factor);
+    // La couleur du texte est décidée en fonction de la luminosité
+    // de la couleur de fond.
+    $bg_lightness: lightness($bg);
+    color: if($bg_lightness> 70%, $btn-font_color_alt, $btn-font_color);
+  }
+
+  // Des coins arrondis sont requis.
+  @if $radius {
+    -webkit-border-radius: $btn-radius;
+    border-radius: $btn-radius;
+  }
+}
+
+// Règles d’agencement communes aux différents types de boutons.
+%module-btn {
+  line-height: 1;
+  margin: $btn-margin;
+  position: relative;
+  text-align: $btn-font_align;
+}
+
+// Spécifie les dimensions d'un bouton de taille classique.
+%module-btn-medium {
+  @extend %module-btn;
+  padding-top: $btn-medium-padding;
+  padding-bottom: $btn-medium-padding + 1;
+  padding-right: $btn-medium-padding * 2;
+  padding-left: $btn-medium-padding * 2;
+  font-size: $btn-medium-font_size;
+}
+
+// Spécifie les dimensions d'un bouton large.
+%module-btn-large {
+  @extend %module-btn;
+  padding-top: $btn-large-padding;
+  padding-bottom: $btn-large-padding + 1;
+  padding-right: $btn-large-padding * 2;
+  padding-left: $btn-large-padding * 2;
+  font-size: $btn-large-font_size;
+}
+
+// Définit l'apparence commune à tous les boutons.
+%theme-btn-base {
+  border-style: $btn-border_style;
+  border-width: $btn-border_width;
+  cursor: pointer;
+  font-family: $btn-font_family;
+  font-weight: $btn-font_weight;
+  text-decoration: none;
+  &.disabled {
+    opacity: $btn-disabled-opacity;
+  }
+}
+
+// Précise l'apparence par défaut d'un bouton.
+%theme-btn-default {
+  @extend %theme-btn-base;
+  @include btn-style;
+}
+
+// Précise l'apparence d'un bouton attestant de la bonne réalisation
+// d'une tâche.
+%theme-btn-success {
+  @extend %theme-btn-base;
+  @include btn-style($bg: $btn-success-bg_color);
+}
+
+// Sélecteurs concrets pour un bouton basique.
+.btn, button {
+  @extend %module-btn-medium;
+  @extend %theme-btn-default;
+  // État de réussite.
+  &.success {
+    @extend %theme-btn-success;
+  }
+}
+
+// Afficher un bouton plus large.
+.btn-large {
+  @extend %module-btn-large;
+  @extend %theme-btn-default;
+  // État de réussite.
+  &.success {
+    @extend %theme-btn-success;
+  }
+}

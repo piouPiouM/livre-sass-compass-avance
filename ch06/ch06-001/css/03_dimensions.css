@@ -1,0 +1,58 @@
+.html5-sprite, .html5-connectivity, .html5-device_access, .html5-effects_3d, .html5-logo, .html5-multimedia, .html5-offline_storage, .html5-performance, .html5-semantics, .html5-styling {
+  background-image: url('../img/html5-s23d7ec50de.png');
+  background-repeat: no-repeat;
+}
+
+.html5-connectivity {
+  background-position: 0 0;
+  height: 32px;
+  width: 32px;
+}
+
+.html5-device_access {
+  background-position: 0 -32px;
+  height: 32px;
+  width: 32px;
+}
+
+.html5-effects_3d {
+  background-position: 0 -64px;
+  height: 32px;
+  width: 32px;
+}
+
+.html5-logo {
+  background-position: 0 -96px;
+  height: 64px;
+  width: 64px;
+}
+
+.html5-multimedia {
+  background-position: 0 -160px;
+  height: 32px;
+  width: 32px;
+}
+
+.html5-offline_storage {
+  background-position: 0 -192px;
+  height: 32px;
+  width: 32px;
+}
+
+.html5-performance {
+  background-position: 0 -224px;
+  height: 32px;
+  width: 32px;
+}
+
+.html5-semantics {
+  background-position: 0 -256px;
+  height: 32px;
+  width: 32px;
+}
+
+.html5-styling {
+  background-position: 0 -288px;
+  height: 32px;
+  width: 32px;
+}

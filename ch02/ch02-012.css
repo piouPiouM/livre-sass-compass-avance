@@ -1,0 +1,18 @@
+.widget, .widget-specific, .widget-new {
+  padding: .5em 2.5em;
+  overflow: hidden;
+}
+.widget h2, .widget-specific h2, .widget-new h2, .widget h3, .widget-specific h3, .widget-new h3 {
+  margin-bottom: 1.5em;
+}
+.widget img, .widget-specific img, .widget-new img {
+  float: left;
+}
+
+.widget-specific {
+  border: 1px solid #c1c1c1;
+}
+
+.widget-new {
+  background-color: #c1c1c1;
+}

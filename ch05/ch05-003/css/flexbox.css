@@ -1,0 +1,21 @@
+.grid {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+
+.col {
+  background: #ccc;
+  padding: 30px;
+}
+
+.fluid {
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.fixed {
+  background: red;
+  width: 400px;
+}

@@ -1,0 +1,21 @@
+// (page 26)
+
+.menu {
+  list-style: none;
+  overflow: hidden;
+  li {
+    float: left;
+    + li {
+      margin-left: 1em;
+    }
+  }
+  a {
+    text-decoration: none;
+    :hover {
+      text-decoration: underline;
+    }
+    :focus {
+      text-decoration: underline;
+    }
+  }
+}

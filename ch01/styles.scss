@@ -1,0 +1,17 @@
+.nav {
+  h2 {
+    margin-bottom: 8px;
+  }
+  li {
+    margin-bottom: 1px;
+  }
+  a {
+    display: block;
+    &:hover, &:focus {
+      color: royalblue;
+    }
+    &:active {
+      color: royalblue;
+    }
+  }
+}

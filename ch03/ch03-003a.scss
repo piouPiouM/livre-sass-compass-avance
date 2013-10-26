@@ -1,0 +1,19 @@
+// Incapacité de Sass à générer des variables dynamiquement
+// ========================================================
+// (page 119)
+
+// Type      | Bg    | Text  | Border | Link
+// ----------|-------|-------|--------|-------
+$msg-status:  #d5edf8 #205791 #92cae4  #205791 !default;
+$msg-ok:      #e6efc2 #264409 #c6d880  #264409 !default;
+
+@each $type in status, ok {
+  // Alors que nous voulions ici générer les noms de variables
+  // "$msg-status" et "$msg-ok", une erreur est levée par Sass. Le
+  // préprocesseur ne comprend pas l'écriture `$msg-$type`. Le recours
+  // à l'interpolation de variable est également rejeté.
+  $mgs-list: join($type, $msg-$type); // point 1
+  @each $msg in $msg-list {
+    // Code
+  }
+}

@@ -1,0 +1,9 @@
+/* line 3, styles.scss */
+.sample-absolute {
+  position: absolute;
+  top: 1em;
+  left: 10px;
+  background: deepskyblue;
+  height: 10em;
+  width: 10em;
+}

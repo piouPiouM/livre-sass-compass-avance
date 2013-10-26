@@ -1,0 +1,9 @@
+/* line 5, ../sass/style.scss */
+.logo {
+  background: transparent url('/img/logo.png?1382793188') no-repeat 0 0;
+}
+
+/* line 10, ../sass/style.scss */
+.new-logo {
+  background: transparent url('/img/new-logo.png') no-repeat 0 0;
+}

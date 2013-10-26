@@ -1,0 +1,44 @@
+html, body {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%;
+  height: 100%; }
+
+body {
+  font-size: 7.2em;
+  font-size: 7.2rem;
+  display: -webkit-box;
+  -webkit-box-pack: center;
+  -webkit-box-align: center;
+  display: -moz-box;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  display: -ms-box;
+  -ms-box-pack: center;
+  -ms-box-align: center;
+  display: box;
+  box-pack: center;
+  box-align: center;
+  width: 100%;
+  min-height: 95%;
+  font-family: "Brush Script MT", cursive;
+  background-color: #d9d9d9;
+  text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.7); }
+  @media only screen and (min-width: 800px) {
+    body {
+      background-color: orange;
+      text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.7); } }
+  @media only screen and (max-width: 449px) {
+    body {
+      background-color: #66ccff;
+      text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.7); } }
+
+.hero {
+  font-size: 3.6em;
+  font-size: 3.6rem;
+  text-align: center;
+  margin: 1em; }
+
+/*# sourceMappingURL=styles.css.map */

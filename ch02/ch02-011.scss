@@ -1,0 +1,33 @@
+// DRY avec l'héritage
+// ===================
+// (page 69)
+
+$alert-border_radius: 4px;
+
+// Message d'alerte
+.alert {
+  color: #c09853;
+  background-color: #fcf8e3;
+  border: 1px solid #fbeed5;
+  padding: .5em 2.5em;
+  margin-bottom: 1.4em;
+  -webkit-border-radius: $alert-border_radius;
+     -moz-border-radius: $alert-border_radius;
+          border-radius: $alert-border_radius;
+}
+
+// Message d'erreur
+.alert-error {
+  @extend .alert;
+  color: #b94a48;
+  background-color: #f2dede;
+  border-color: #eed3d7;
+}
+
+// Message de succès
+.alert-success {
+  @extend .alert;
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}

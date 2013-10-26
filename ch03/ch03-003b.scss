@@ -1,0 +1,35 @@
+// Exemple d'usage de la foncion zip()
+// ===================================
+// (page 119)
+
+// La définition des différents types de messages et leurs couleurs sont
+// réunis en un seul endroit. La lecture se fait par colonne.
+$msg-types:        status,      ok, warning,   error !default;
+$msg-bg-colors:   #d5edf8, #e6efc2, #fff6bf, #fbe3e4 !default;
+$msg-colors:      #205791, #264409, #514721, #8a1f11 !default;
+$msg-bd-colors:   #92cae4, #c6d880, #ffd324, #fbc2c4 !default;
+$msg-link-colors: #205791, #264409, #514721, #8a1f11 !default;
+
+// Création d'une liste de sous-listes composées par :
+// un nom de classe, une couleur de fond, une couleur de texte, une 
+// couleur de bordure et une couleur de lien.
+$msg-list: zip(
+  $msg-types, $msg-bg-colors, $msg-colors,
+  $msg-bd-colors, $msg-link-colors
+);
+
+// DRY!
+// Génération automatisée des 4 règles CSS.
+@each $msg in $msg-list {
+  // Nous retrouvons dans la liste `$msg` les différentes informations
+  // lues ligne par ligne : de 1 pour le type d'erreur à 5 pour la
+  // couleur des liens.
+  .message-#{nth($msg, 1)} {
+    background: nth($msg, 2);
+    color: nth($msg, 3);
+    border-color: nth($msg, 4);
+    a {
+      color: nth($msg, 5);
+    }
+  }
+}

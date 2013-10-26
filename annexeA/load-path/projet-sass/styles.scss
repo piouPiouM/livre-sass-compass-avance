@@ -1,0 +1,8 @@
+@import "../lib/ppm/position";
+
+.sample-absolute {
+  @include ppm-absolute($left: 10px, $top: 1em);
+  background: deepskyblue;
+  height: 10em;
+  width: 10em;
+}

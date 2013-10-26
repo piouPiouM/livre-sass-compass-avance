@@ -1,0 +1,27 @@
+.important, .error {
+  color: red;
+}
+
+.error {
+  background-color: #fcc;
+}
+.error h3 {
+  font-weight: bold;
+}
+
+/*
+Première anicroche, le sélecteur ".success. error" n'est pas désiré
+puisqu'il n'apparaitra jamais dans une page (non-sens sémantique).
+*/
+.success .important, .success .error {
+  color: green;
+}
+
+/*
+Pire. Si dans une page, un élément résoud le sélecteur indésiré
+".content .error h3", alors il supprimera toute mise en exergue du fait
+de la cascade CSS.
+*/
+.content .important h3, .content .error h3 {
+  font-weight: normal;
+}

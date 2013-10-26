@@ -1,0 +1,29 @@
+// Un placeholder en action
+// ========================
+// (page 74)
+
+// Placeholder pour appliquer une ombre portée.
+%drop-shadow {
+  // Firefox 3.5
+  -moz-box-shadow: 8px 8px 5px #888;
+  // Chrome 1.0+, Safari 3.0+
+  -webkit-box-shadow: 8px 8px 5px #888;
+  // Firefox 4.0+, Chrome 10+, Safari 5.1+, IE 9+, Opera 10.5+
+  box-shadow: 8px 8px 5px #888;
+}
+
+// Placeholder pour arrondir les coins d'un élément.
+%rounded {
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+}
+
+.box {
+  @extend %drop-shadow;
+  padding: 1em 1.2em;
+}
+#main .notice {
+  background-color: #ffc;
+  @extend %drop-shadow;
+}

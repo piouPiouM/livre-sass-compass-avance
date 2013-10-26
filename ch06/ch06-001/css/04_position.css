@@ -1,0 +1,44 @@
+.html5-large-sprite, .html5-large-compass, .html5-large-connectivity, .html5-large-device_access, .html5-large-effects_3d, .html5-large-logo, .html5-large-multimedia, .html5-large-offline_storage, .html5-large-performance, .html5-large-semantics, .html5-large-styling {
+  background-image: url('../img/html5-large-s25e1c548b9.png');
+  background-repeat: no-repeat;
+}
+
+.html5-large-compass {
+  background-position: 0 0;
+}
+
+.html5-large-connectivity {
+  background-position: -179px -84px;
+}
+
+.html5-large-device_access {
+  background-position: -195px -148px;
+}
+
+.html5-large-effects_3d {
+  background-position: -195px -180px;
+}
+
+.html5-large-logo {
+  background-position: -359px -212px;
+}
+
+.html5-large-multimedia {
+  background-position: -195px -276px;
+}
+
+.html5-large-offline_storage {
+  background-position: -195px -308px;
+}
+
+.html5-large-performance {
+  background-position: -195px -340px;
+}
+
+.html5-large-semantics {
+  background-position: -195px -372px;
+}
+
+.html5-large-styling {
+  background-position: -195px -404px;
+}

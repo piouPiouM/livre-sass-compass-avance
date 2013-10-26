@@ -1,0 +1,12 @@
+// Ne perdez plus vos images
+// =========================
+// (page 161)
+
+.logo {
+  background: transparent image-url('logo.png') no-repeat 0 0;
+}
+
+// Une erreur est affichée lorsqu'une image est manquante.
+.new-logo {
+  background: transparent image-url('new-logo.png') no-repeat 0 0;
+}

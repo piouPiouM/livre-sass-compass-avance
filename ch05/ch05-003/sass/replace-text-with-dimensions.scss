@@ -1,0 +1,11 @@
+// Remplacer un texte par une image avec Compass
+// =============================================
+// (page 169)
+
+@import "compass/typography/text/replacement";
+
+$logo: 'logo.png';
+.logo {
+  display: block;
+  @include replace-text-with-dimensions($logo, 0, 0);
+}

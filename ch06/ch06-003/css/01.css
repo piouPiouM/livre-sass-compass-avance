@@ -1,0 +1,36 @@
+.top, .next, .bottom, .prev, a.back {
+  background-image: url('../img/icons-01-s85f6753e7d.png');
+  background-repeat: no-repeat;
+}
+
+.top, .next, .bottom, .prev, a.back {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
+.top {
+  background-position: 0 -96px;
+  height: 32px;
+  width: 32px;
+}
+
+.next {
+  background-position: 0 -64px;
+  height: 32px;
+  width: 32px;
+}
+
+.bottom {
+  background-position: 0 0;
+  height: 32px;
+  width: 32px;
+}
+
+.prev, a.back {
+  background-position: 0 -32px;
+  height: 32px;
+  width: 32px;
+}

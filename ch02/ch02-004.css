@@ -1,0 +1,11 @@
+nav, .menu {
+  background-color: #fefefe;
+}
+nav ul, nav ol, .menu ul, .menu ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li a, nav ul li .link, nav ol li a, nav ol li .link, .menu ul li a, .menu ul li .link, .menu ol li a, .menu ol li .link {
+  color: blue;
+}

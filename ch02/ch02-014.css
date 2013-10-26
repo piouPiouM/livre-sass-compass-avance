@@ -1,0 +1,13 @@
+.box, #main .notice {
+  -moz-box-shadow: 8px 8px 5px #888;
+  -webkit-box-shadow: 8px 8px 5px #888;
+  box-shadow: 8px 8px 5px #888;
+}
+
+.box {
+  padding: 1em 1.2em;
+}
+
+#main .notice {
+  background-color: #ffc;
+}

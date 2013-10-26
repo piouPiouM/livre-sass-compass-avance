@@ -1,0 +1,10 @@
+.row, .row-separator {
+  padding: 3px 15px 3px 15px;
+}
+.row > :first-child, .row-separator > :first-child {
+  margin-top: 0;
+}
+
+.row-separator {
+  border: 1px solid #000;
+}

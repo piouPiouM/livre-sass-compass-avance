@@ -1,0 +1,18 @@
+// Une règle imbriquée est déclarée dans un placeholder
+// ====================================================
+// (page 75)
+
+%layout-row {
+  padding: 3px 15px 3px 15px;
+  > :first-child {
+    margin-top: 0;
+  }
+}
+
+.row {
+  @extend %layout-row;
+}
+.row-separator {
+  @extend %layout-row;
+  border: 1px solid #000;
+}

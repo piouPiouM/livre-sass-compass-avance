@@ -1,0 +1,17 @@
+// Coins arrondis avec Compass
+// ===========================
+// (pages 171 et 172)
+
+@import "compass/css3/border-radius";
+
+div {
+  @include border-radius;
+}
+
+div.corner-right {
+  @include border-radius(0 50px 50px 0);
+}
+
+div.corner-right {
+  @include border-right-radius(50px);
+}

@@ -1,0 +1,29 @@
+// Un module d'image complet
+// =========================
+// (pages 177 à 181)
+
+@import "compass/css3/images";
+
+// Dégradé radial.
+.radial-gradient {
+  @include background(radial-gradient(ellipse at center top, green, blue));
+} 
+
+// Simulation d'un halo blanc au-dessus d'une image.
+.multiple-backgrounds {
+  $img: 'kitten.jpg';
+  display: block;
+  width: image-width($img);
+  height: image-height($img);
+  @include background(
+    radial-gradient(ellipse, rgba(#fff ,0), #fff),
+    image-url($img)
+  );
+}
+
+// Trois lignes pour générer un dégradé linéaire cross-browser.
+$experimental-support-for-svg: true;  // IE9
+.linear-gradient {
+  @include filter-gradient(#a9e4f7, #0fb4e7); // IE6-8
+  @include background(linear-gradient(#a9e4f7, #0fb4e7));
+}

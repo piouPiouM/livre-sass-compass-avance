@@ -1,0 +1,32 @@
+// Création de sélecteurs nuisibles
+// ================================
+// (page 72)
+
+// Classe de base a hériter.
+.important {
+  color: red;
+}
+
+// Un bloc destiné à afficher un message d'erreur.
+.error {
+  @extend .important; // héritage
+  background-color: #fcc;
+  // Un titre de niveau 3 contenu dans un élément muni de la classe
+  // "error" doit s'afficher en gras.
+  h3 {
+    font-weight: bold;
+  }
+}
+
+// Plus loin dans la feuille, il est déclaré qu'un élément "important"
+// enfant d'un bloc "success" affiche le texte en vert.
+.success .important {
+  color: green;
+}
+
+// Ailleurs dans le site, les titres de niveau 3 d'un élément pourvu de
+// la classe "important" (notre classe de base) ne doit pas être
+// mis en gras.
+.content .important h3 {
+  font-weight: normal;
+}

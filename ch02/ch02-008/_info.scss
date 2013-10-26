@@ -1,0 +1,10 @@
+$info-color1: #d9edf7;
+$info-color2: #dce8f1;
+$info-font-family: Helvetica, Arial, sans-serif;
+
+.info {
+  // Les variables globales du partial sont accessibles dans le
+  // contexte local créé par la règle du sélecteur .info.
+  background-color: $info-color1;
+  border: 1px solid $info-color2;
+}

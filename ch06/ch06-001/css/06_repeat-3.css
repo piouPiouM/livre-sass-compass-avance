@@ -1,0 +1,16 @@
+.rx3-sprite, .rx3-badge, .rx3-pattern {
+  background-image: url('../img/rx3-s8ba62b4709.png');
+  background-repeat: no-repeat;
+}
+
+.rx3-badge {
+  background-position: 0 0;
+}
+
+.rx3-pattern {
+  background-position: 0 -64px;
+}
+
+.rx-pattern {
+  background-repeat: repeat-x;
+}

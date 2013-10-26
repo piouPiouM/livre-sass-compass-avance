@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "MuseoSlab500Regular";
+  src: url('fonts/Museo_Slab_500.eot');
+  src: url('fonts/Museo_Slab_500.eot?#iefix') format('embedded-opentype'), url('fonts/Museo_Slab_500.woff') format('woff'), url('fonts/Museo_Slab_500.ttf') format('truetype'), url('fonts/Museo_Slab_500.svg#MuseoSlab500Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: MuseoSlab500Regular, Arial, sans-serif;
+}

@@ -1,0 +1,52 @@
+// Ensemble de mixins destiné à raccourcir la saisie des positions CSS.
+// En réponse au billet de Hugo Giraudel :
+// http://hugogiraudel.com/2013/08/05/offsets-sass-mixin/
+//
+// À tester en ligne : http://codepen.io/piouPiouM/pen/bLmkz
+
+$ppm-position-default-top:  null !default;
+$ppm-position-defaultright:  null !default;
+$ppm-position-defaultbottom: null !default;
+$ppm-position-defaultleft:   null !default;
+
+// @private
+@mixin _ppm-position($type,
+                     $top:    $ppm-position-defaulttop,
+                     $right:  $ppm-position-defaultright,
+                     $bottom: $ppm-position-defaultbottom,
+                     $left:   $ppm-position-defaultleft) {
+  $allowed_types: 'absolute' 'relative' 'fixed';
+
+  @if not index($allowed_types, $type) {
+    @warn "Unknow position: #{$type}.";
+  }
+
+  position: $type;
+  @each $data in top $top, right $right, bottom $bottom, left $left {
+    // Because of null value to default, if a position argument (eg `$top`) is not set,
+    // Sass does not output the property.
+    // Thus, values like 12px, 23em, -4rem, inherit or initial are accepted.
+    #{nth($data, 1)}: nth($data, 2);
+  }
+}
+
+@mixin ppm-absolute($top:    $ppm-position-defaulttop,
+                    $right:  $ppm-position-defaultright,
+                    $bottom: $ppm-position-defaultbottom,
+                    $left:   $ppm-position-defaultleft) {
+  @include _ppm-position(absolute, $top, $right, $bottom, $left);
+}
+
+@mixin ppm-relative($top:    $ppm-position-defaulttop,
+                    $right:  $ppm-position-defaultright,
+                    $bottom: $ppm-position-defaultbottom,
+                    $left:   $ppm-position-defaultleft) {
+  @include _ppm-position(relative, $top, $right, $bottom, $left);
+}
+
+@mixin ppm-fixed($top:    $ppm-position-defaulttop,
+                 $right:  $ppm-position-defaultright,
+                 $bottom: $ppm-position-defaultbottom,
+                 $left:   $ppm-position-defaultleft) {
+  @include _ppm-position(fixed, $top, $right, $bottom, $left);
+}

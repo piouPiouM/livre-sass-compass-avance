@@ -1,0 +1,35 @@
+// Exemple 1 : personnaliser les sélecteurs des sprites
+// ====================================================
+// (page 213)
+
+@import "compass";
+
+// Les dimensions des icônes doivent être ajoutées à la
+// feuille de styles.
+$icons_01-sprite-dimensions: true;
+
+// L'usage d'un placeholder est motivé par l'inutilité de la classe de
+// base créée automatiquement par Compass. En effet, nous ne
+// l'utiliserons pas puisque la structure HTML est déjà en place.
+$icons_01-sprite-base-class: '%icons_01';
+
+// On souhaite profiter des mixins magiques de Compass.
+@import "icons-01/*.png";
+
+// Les icônes seront présentées en ligne tout en bénéficiant d’un
+// affichage de type bloc pour pouvoir leur donner des dimensions.
+%icons_01 {
+  @include inline-block;
+}
+
+// Finalement nous précisons la position et les dimensions de chaque
+// sprite pour les sélecteurs imposés par le HTML.
+// Nous utilisons ici le mixin <map>-sprite créé dynamiquement par
+// Compass.
+.top    { @include icons_01-sprite('arrow_up'); }
+.next   { @include icons_01-sprite('arrow_right'); }
+.bottom { @include icons_01-sprite('arrow_down'); }
+
+// L’image "arrow_left" sera pour sa part affichée pour les éléments
+// ciblés par deux sélecteurs.
+.prev, a.back { @include icons_01-sprite('arrow_left'); }

@@ -1,0 +1,20 @@
+// Mise en pratique des feuilles de styles partielles
+// ==================================================
+// (page 46)
+//
+// Instructions de compilation :
+//
+//     cd ch02-007
+//     sass -t expanded ch02-007.scss ch02-007.css
+
+/*!
+ * Fichier source ch02-007.scss
+ */
+// Nous importons le partial _reset.scss contenu dans le sous-répertoire
+// "sub1/". Le chemin indiqué est relatif à celui du fichier qui invoque
+// l'instruction @import.
+@import "sub1/reset";
+
+// Il est évidemment possible de charger directement un partial
+// situé à n'importe quelle profondeur du projet.
+@import "sub1/sub2/direct";

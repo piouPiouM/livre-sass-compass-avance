@@ -1,0 +1,96 @@
+// SMACSS appliqué à Sass
+// ======================
+// (page 135)
+
+// Module de bouton
+// ----------------
+
+@mixin btn-style($bg: #2ba6cb, $radius: true) {
+  background-color: $bg;
+  border-color: darken($bg, 10%);
+
+  &:hover, &:focus {
+    background-color: darken($bg, 10%);
+    // La couleur du texte est décidée en fonction de la luminosité
+    // de la couleur de fond.
+    $bg_lightness: lightness($bg);
+    color: if($bg_lightness> 70%, #333, #fff);
+  }
+
+  // Des coins arrondis sont requis.
+  @if $radius {
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+}
+
+// Règles d’agencement communes aux différents types de boutons.
+%module-btn {
+  line-height: 1;
+  margin: 0 0 20px;
+  position: relative;
+  text-align: center;
+}
+
+// Spécifie les dimensions d'un bouton de taille moyenne.
+%module-btn-medium {
+  @extend %module-btn;
+  padding: 12px 24px 13px;
+  font-size: 1em;
+}
+
+// Spécifie les dimensions d'un bouton large.
+%module-btn-large {
+  @extend %module-btn;
+  padding: 16px 32px 17px;
+  font-size: 1.25em;
+}
+
+// Définit l'apparence commune à tous les boutons.
+// Nous séparons les propriétés de formatage des règles d’agencement
+// pour offrir plus de souplesse dans la personnalisation de l’affichage
+// des modules.
+%theme-btn-base {
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  &.disabled {
+    opacity: .6;
+  }
+}
+
+// Précise l'apparence par défaut d'un bouton.
+%theme-btn-default {
+  @extend %theme-btn-base;
+  @include btn-style;
+}
+
+// Précise l'apparence d'un bouton attestant de la bonne réalisation
+// d'une tâche.
+%theme-btn-success {
+  @extend %theme-btn-base;
+  @include btn-style($bg: #5da423);
+}
+
+// Sélecteurs concrets pour un bouton basique.
+.btn, button {
+  @extend %module-btn-medium;
+  @extend %theme-btn-default;
+  // État de réussite.
+  &.success {
+    @extend %theme-btn-success;
+  }
+}
+
+// Afficher un bouton plus large.
+.btn-large {
+  @extend %module-btn-large;
+  @extend %theme-btn-default;
+  // État de réussite.
+  &.success {
+    @extend %theme-btn-success;
+  }
+}

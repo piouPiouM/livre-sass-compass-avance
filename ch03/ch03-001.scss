@@ -1,0 +1,16 @@
+// Le cas particulier de la valeur nulle
+// =====================================
+// (page 99)
+
+// Cas 1 : la valeur null est directement assigné à la propriété.
+.demo_1 {
+  color: null;
+  width: 80%;
+}
+
+// Cas 2 : la valeur null est assignée à la propriété via une variable.
+.demo_2 {
+  $demo_color: null;
+  color: $demo_color;
+  width: 80%;
+}

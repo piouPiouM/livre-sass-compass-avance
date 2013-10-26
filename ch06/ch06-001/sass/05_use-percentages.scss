@@ -1,0 +1,9 @@
+// Configurer la position des sprites CSS en pourcentages
+// ======================================================
+// (page 197)
+
+@import "compass/utilities/sprites";
+
+$html5-use-percentages: true;
+@import "html5/*.png";
+@include all-html5-sprites;

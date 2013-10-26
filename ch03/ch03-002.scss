@@ -1,0 +1,11 @@
+// Le cas particulier de la valeur nulle
+// =====================================
+// (page 100)
+
+.temoin {
+  border: 1px solid #000;
+}
+.demo {
+  $demo-color: null;
+  color: $demo_color;
+}

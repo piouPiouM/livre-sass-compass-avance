@@ -1,0 +1,44 @@
+// Appliquer une ombre portée avec Compass
+// =======================================
+// (page 173)
+
+// La couleur par défaut des ombres portées.
+$default-box-shadow-color: rgba(black, .5) !default;
+
+// Le décalage horizontal par défaut.
+$default-box-shadow-h-offset: 1px !default;
+
+// Le décalage vertical par défaut.
+$default-box-shadow-v-offset: 2px !default;
+
+// La distance du flou.
+$default-box-shadow-blur: 5px !default;
+
+// La taille de l'ombre, permet de redimensionner l'ombre.
+$default-box-shadow-spread : 1px !default;
+
+// La position interne de l'ombre.
+$default-box-shadow-inset : false !default;
+
+// Chargement du module d'ombres portées de Compass.
+@import "compass/css3/box-shadow";
+
+.simple-shadow {
+  @include single-box-shadow;
+  &.alert {
+    // Note : je précise ici l'argument `$color` explicitement.
+    // En effet, lors de la rédaction du livre, cet argument était positionné
+    // en première position, nous autorisant à directement écrire la couleur
+    // de l'ombre portée. Or, dans la prochaine version stable de Compass, soit
+    // la 0.13, l'argument `$color` a été déplacé en cinquième position.
+    // Nous sommes donc désormais obligés de préciser le nom de l'argument.
+    @include single-box-shadow($color: red);
+  }
+}
+
+.both-shadow {
+  // Ajout d'une ombre portée et une ombre interne pour simuler
+  // une lueur interne.
+  @include box-shadow(1px 2px 20px rgba(white, .6) inset,
+                      1px 2px 5px 1px rgba(black, .5));
+}

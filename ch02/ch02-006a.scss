@@ -1,0 +1,11 @@
+// Portée locale
+// =============
+// (page 39)
+
+.warning {
+  $highlight-color: #ff7100; color: $highlight-color;
+  h3 {
+    color: #fff;
+    background-color: $highlight-color;
+  }
+}

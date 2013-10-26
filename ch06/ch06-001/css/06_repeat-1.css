@@ -1,0 +1,16 @@
+.rx1-sprite, .rx1-badge, .rx1-pattern {
+  background-image: url('../img/rx1-s4c3054e128.png');
+  background-repeat: no-repeat;
+}
+
+.rx1-badge {
+  background-position: 0 0;
+}
+
+.rx1-pattern {
+  background-position: 0 -64px;
+}
+
+.rx-pattern {
+  background-repeat: repeat-x;
+}

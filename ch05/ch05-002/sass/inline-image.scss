@@ -1,0 +1,9 @@
+// Images embarquées avec Data-URI
+// ===============================
+// (page 165)
+
+ul.bullets {
+  li {
+    list-style-image: inline-image('bullet.png');
+  }
+}

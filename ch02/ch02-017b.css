@@ -1,0 +1,14 @@
+.important, .error {
+  color: red;
+}
+.important h3, .error h3 {
+  font-weight: bold;
+}
+
+.error {
+  background-color: #fcc;
+}
+
+.content .error h3 {
+  font-weight: normal;
+}

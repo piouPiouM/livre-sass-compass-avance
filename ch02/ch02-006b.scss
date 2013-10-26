@@ -1,0 +1,12 @@
+// Référencer une variable locale dans un contexte extérieur
+// =========================================================
+// (page 39)
+
+.warning {
+  $highlight-color: #ff7100;
+  color: $highlight-color;
+}
+.warning-title {
+  color: #fff;
+  background-color: $highlight-color;
+}

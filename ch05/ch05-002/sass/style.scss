@@ -1,0 +1,14 @@
+// Remplacer un texte par une image de fond
+// ========================================
+// (page 164)
+
+$logo: 'logo.png';
+.logo {
+  display: block;
+  text-indent: -20000em;
+  overflow: hidden;
+  text-align: left;
+  background: transparent image-url($logo) no-repeat 0 0;
+  height: image-height($logo);
+  width: image-width($logo);
+}

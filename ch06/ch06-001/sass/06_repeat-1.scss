@@ -1,0 +1,11 @@
+// Absence de répétition
+// =====================
+// (page 198)
+
+@import "compass/utilities/sprites";
+
+@import "rx1/*.png";
+@include all-rx1-sprites;
+.rx-pattern {
+  background-repeat: repeat-x;
+}

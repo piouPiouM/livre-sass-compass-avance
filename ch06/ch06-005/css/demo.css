@@ -1,0 +1,31 @@
+.icons-dribbble, .icons-github, .icons-gplus, .icons-instagram, .icons-linkedin, .icons-twitter, .icons-youtube { background-image: url('../img/icons-sf7f5afa0d9.png'); background-repeat: no-repeat; }
+
+.icons-dribbble { background-position: 0 0; }
+.icons-dribbble:hover, .icons-dribbble.dribbble-hover { background-position: -32px 0; }
+
+.icons-github { background-position: -64px 0; }
+.icons-github:hover, .icons-github.github-hover { background-position: -96px 0; }
+
+.icons-gplus { background-position: 0 -480px; }
+
+.icons-instagram { background-position: 0 -96px; }
+
+.icons-linkedin { background-position: 0 -352px; }
+.icons-linkedin:hover, .icons-linkedin.linkedin-hover { background-position: 0 -224px; }
+
+.icons-twitter { background-position: -64px -32px; }
+.icons-twitter:hover, .icons-twitter.twitter-hover { background-position: 0 -32px; }
+
+.icons-youtube { background-position: 0 -608px; }
+
+[class*=" icons-"], [class^="icons-"] { text-indent: -119988px; overflow: hidden; text-align: left; display: block; }
+
+/*!
+ * Les dimensions des sprites sont bien regroupées selon les trois
+ * différentes tailles d’images dont nous disposions.
+ */
+.icons-dribbble, .icons-github { height: 32px; width: 32px; }
+
+.icons-gplus, .icons-instagram, .icons-linkedin, .icons-youtube { height: 128px; width: 128px; }
+
+.icons-twitter { height: 64px; width: 64px; }

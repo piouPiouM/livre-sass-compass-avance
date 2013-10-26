@@ -1,0 +1,52 @@
+.btn, button, .btn-large {
+  line-height: 1;
+  margin: 0 0 20px;
+  position: relative;
+  text-align: center;
+}
+
+.btn, button {
+  padding: 12px 24px 13px;
+  font-size: 1em;
+}
+
+.btn-large {
+  padding: 16px 32px 17px;
+  font-size: 1.25em;
+}
+
+.btn, button, .btn-large {
+  border-style: solid;
+  border-width: 1px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}
+.disabled.btn, button.disabled, .disabled.btn-large {
+  opacity: .6;
+}
+
+.btn, button, .btn-large {
+  background-color: #2ba6cb;
+  border-color: #2284a1;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.btn:hover, button:hover, .btn-large:hover, .btn:focus, button:focus,
+.btn-large:focus {
+  background-color: #2284a1;
+  color: white;
+}
+
+.btn.success, button.success, .btn-large.success {
+  background-color: #5da423;
+  border-color: #457a1a;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+.btn.success:hover, button.success:hover, .btn-large.success:hover,
+.btn.success:focus, button.success:focus, .btn-large.success:focus {
+  background-color: #457a1a;
+  color: white;
+}

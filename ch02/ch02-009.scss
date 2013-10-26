@@ -1,0 +1,18 @@
+// Utilisation du sélecteur parent au sein d'un mixin
+// ==================================================
+// (page 58)
+
+@mixin inline-list {
+  list-style-type: none;
+  &, & li {
+    margin: 0;
+    padding: 0;
+    display: inline;
+    #top & {
+      color: red;
+    }
+  }
+}
+ul.inline {
+  @include inline-list;
+}

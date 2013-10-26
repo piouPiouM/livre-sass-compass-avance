@@ -1,0 +1,13 @@
+.menu {
+  list-style: none;
+  overflow: hidden;
+  li {
+    float: left;
+    + li {
+      margin-left: 1em;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+}

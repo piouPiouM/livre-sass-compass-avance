@@ -1,0 +1,15 @@
+// @font-face facile avec Compass
+// ==============================
+// (page 176)
+
+@import "compass/css3/font-face";
+
+@include font-face('MuseoSlab500Regular',
+  font-files('Museo_Slab_500.woff', woff,
+             'Museo_Slab_500.ttf' , truetype,
+             'Museo_Slab_500.svg#MuseoSlab500Regular', svg),
+             'Museo_Slab_500.eot', normal, normal);
+
+#{headers()} {
+  font-family: MuseoSlab500Regular, Arial, sans-serif;
+}

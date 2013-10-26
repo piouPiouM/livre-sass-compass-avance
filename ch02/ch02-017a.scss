@@ -1,0 +1,20 @@
+// Consolider à tord un héritage par placeholder
+// =============================================
+// (page 90)
+
+%important {
+  color: red;
+  h3 {
+    font-weight: bold;
+  }
+}
+.important {
+  @extend %important;
+}
+.error {
+  @extend %important;
+  background-color: #fcc;
+}
+.content %important h3 {
+  font-weight: normal;
+}

@@ -1,0 +1,6 @@
+.weather {
+  width: 200px;
+  height: 200px;
+  background: url("img/weather.png") no-repeat 0 0;
+  background: url("img/light-cloud.png") no-repeat right 90px, url("img/sun.png") no-repeat 50% 50%, url("img/dark-cloud.png") no-repeat left center;
+}

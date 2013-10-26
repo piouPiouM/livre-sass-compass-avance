@@ -1,0 +1,33 @@
+// Usage avancé des placeholders
+// =============================
+// (page 76)
+
+.row, %layout-row {
+  padding: 3px 15px;
+  > :first-child {
+    margin-top: 0;
+  }
+}
+
+%row-with_separator {
+  @extend %layout-row;
+  // Affichera par défaut des bordures horizontales en pointillés.
+  border: 0 dotted #000;
+  border-width: 1px 0;
+  // Si dans la page HTML deux éléments qui étendent ce placeholder sont
+  // consécutifs, le second ne doit pas afficher de bordure supérieure.
+  + %row-with_separator {
+    border-top-width: 0;
+  }
+}
+
+// Un élément pourvu de bordures pleines horizontales.
+.row-separator_plain {
+  @extend %row-with_separator;
+  border-style: solid;
+}
+
+// Un élément pourvu de bordures horizontales en pointillées.
+.row-separator {
+  @extend %row-with_separator;
+}

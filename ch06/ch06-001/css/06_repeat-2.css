@@ -1,0 +1,12 @@
+.rx2-sprite, .rx2-badge, .rx2-pattern {
+  background-image: url('../img/rx2-s94c75515aa.png');
+  background-repeat: no-repeat;
+}
+
+.rx2-badge {
+  background-position: 0 0;
+}
+
+.rx2-pattern {
+  background-position: 0 -64px;
+}

@@ -1,0 +1,9 @@
+p {
+  font: 1em/1.5 sans-serif;
+}
+p:first-letter {
+  float: left;
+  font-size: 3em;
+  line-height: 1;
+  margin-right: .2em;
+}

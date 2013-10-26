@@ -1,0 +1,18 @@
+// Écraser une variable globale depuis le contexte global
+// ======================================================
+// (page 41)
+
+// Déclaration d'une variable globale.
+$highlight-color: #ff7100;
+.warning {
+  color: $highlight-color;
+}
+// Redéclaration de la variable.
+$highlight-color: red;
+.warning-title {
+  color: #fff;
+  background-color: $highlight-color;
+}
+.test {
+  color: $highlight-color;
+}

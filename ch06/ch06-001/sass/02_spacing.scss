@@ -1,0 +1,10 @@
+// Ajout d’espace entre les images de la sprite map
+// ================================================
+// (page 194)
+
+@import "compass/utilities/sprites";
+
+$html5-spacing: 5px;
+$html5-effects_3d-spacing: 20px;
+@import "html5/*.png";
+@include all-html5-sprites;

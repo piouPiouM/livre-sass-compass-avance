@@ -1,0 +1,35 @@
+.message-status {
+  background: #d5edf8;
+  color: #205791;
+  border-color: #92cae4;
+}
+.message-status a {
+  color: #205791;
+}
+
+.message-ok {
+  background: #e6efc2;
+  color: #264409;
+  border-color: #c6d880;
+}
+.message-ok a {
+  color: #264409;
+}
+
+.message-warning {
+  background: #fff6bf;
+  color: #514721;
+  border-color: #ffd324;
+}
+.message-warning a {
+  color: #514721;
+}
+
+.message-error {
+  background: #fbe3e4;
+  color: #8a1f11;
+  border-color: #fbc2c4;
+}
+.message-error a {
+  color: #8a1f11;
+}

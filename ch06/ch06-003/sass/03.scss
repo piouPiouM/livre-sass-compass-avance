@@ -1,0 +1,37 @@
+// Exemple 2bis : supprimer la répétition des dimensions manuellement
+// ==================================================================
+// (page 216)
+
+@import "compass";
+
+// Nous stockons la sprite map dans une variable.
+$icons: sprite-map("icons-03/*.png");
+
+// Ce placeholder servira à regrouper les propriétés communes à tous
+// les sprites.
+%icons_03 {
+  @include inline-block;
+  // Nous appliquons la sprite map en arrière plan, ce qui déclenche
+  // la sauvegarde de l'image sur le système de fichier.
+  background: $icons no-repeat;
+  @include sprite-dimensions($icons, 'arrow_right');
+}
+
+// Pour chaque sprite, nous étendons le placeholder des propriétés
+// communes et nous incluons sa position dans la sprite map.
+.top {
+  @extend %icons_03;
+  @include sprite-background-position($icons, 'arrow_up');
+}
+.next {
+  @extend %icons_03;
+  @include sprite-background-position($icons, 'arrow_right');
+}
+.bottom {
+  @extend %icons_03;
+  @include sprite-background-position($icons, 'arrow_down');
+}
+.prev, a.back {
+  @extend %icons_03;
+  @include sprite-background-position($icons, 'arrow_left');
+}

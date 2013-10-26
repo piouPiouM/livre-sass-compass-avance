@@ -1,0 +1,19 @@
+// Compass 0.13.alpha
+$flex-legacy-enabled: false;
+@import "compass/css3/flexbox";
+
+.grid {
+  @include display-flex;
+  @include flex-direction(column-reverse);
+}
+.col {
+  background: #ccc;
+  padding: 30px;
+}
+.fluid {
+  @include flex(1);
+}
+.fixed {
+  background: red;
+  width: 400px;
+}

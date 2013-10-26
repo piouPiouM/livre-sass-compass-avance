@@ -1,0 +1,11 @@
+// Duplication d'une image dans la sprite map
+// ==========================================
+// (page 198)
+
+@import "compass/utilities/sprites";
+
+$rx2-pattern-repeat: repeat-x;
+@import "rx2/*.png";
+@include all-rx2-sprites;
+.rx-pattern {
+}

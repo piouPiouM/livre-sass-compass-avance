@@ -1,0 +1,72 @@
+@mixin x-sprites-dimensions($map,
+                            $sprite-names: sprite-names($map),
+                            $prefix: null) {
+  // Nous itérons sur le nom des sprites pour générer ou étendre la
+  // règle CSS qui correspond à ses dimensions.
+  @each $name in $sprite-names {
+    @include x-single-sprite-dimensions($map, $name, $prefix);
+  }
+}
+
+// Pile privée.
+$x-sprites-dimensions-stack: ();
+
+// Produit la règle déclarative des dimensions d'un sprite.
+//
+// Les sélecteurs sont regroupés par dimensions identiques à l'aide
+// de placeholders créés dynamiquement afin de réduire les répétitions.
+//
+// Si aucun préfixe n'est précisé nous utiliserons le nom de la sprite
+// map. Désactivez l'ajout du préfixe en précisant le booléen false.
+@mixin x-single-sprite-dimensions($map, $name, $prefix: null) {
+  // Construction du nom de la clé de cache qui servira à identifier
+  // par taille d'image le groupe de règles CSS dans lequel ajouter le
+  // sprite.
+  $map-name: sprite-map-name($map);
+  $sprite-height: sprite-height($map, $name);
+  $sprite-width:  sprite-width($map, $name);
+  $cache-key: "#{$map-name}_#{$sprite-width}x#{$sprite-height}";
+
+  // Si la clé de cache n'existe pas dans la pile privée
+  @if not index($x-sprites-dimensions-stack, $cache-key) {
+    // nous l'ajoutons pour nous assurer que nous rentrons dans ce bloc 
+    // de code qu'une seule fois par taille d'image.
+    $x-sprites-dimensions-stack: append($x-sprites-dimensions-stack,
+                                        $cache-key);
+    // Un placeholder reprenant la clé de cache est créé.
+    // Les propriétés CSS de largeur et de hauteur du sprite sont alors
+    // ajoutées à la règle CSS.
+    // Avec une image de 64px pixels de côté pour une <map> "icons", le
+    // placeholder devient : %x-sprites-dimensions-icons_64x64.
+    // Il est important de générer un placeholder au nom unique qui ne 
+    // sera qu'étendu programmatiquement.
+    %x-sprites-dimensions-#{$cache-key} {
+      @include sprite-dimensions($map, $name);
+    }
+  }
+
+  // Nous ne devons pas traiter les sprites qui contiennent une
+  // pseudo-classe dans leur nom (_hover, _active, _target, _focus)
+  // puisque Compass ne lui génère pas de classes CSS.
+  @if sprite-does-not-have-parent($map, $name) {
+    // Nous devons déclarer la variable $selector en-dehors du test
+    // conditionnel pour pouvoir la réutiliser plus loin, conformément
+    // aux règles de portée des variables vues dans le chapitre 2.
+    $selector: null;
+    // Gestion du préfixe
+    @if false == $prefix { $selector: $name; }
+    @else {
+      // Nous utilisons le nom de la sprite map si le préfixe n'est pas
+      // précisé.
+      $prefix: if($prefix, $prefix, $map-name);
+      $selector: #{$prefix}-#{$name}; 
+    }
+    // Enfin, nous étendons le placeholder qui correspond aux dimensions 
+    // du sprite.
+    // Si <map> est égal à "icons", que $name vaut "twitter" et que la
+    // variable $prefix est nulle, le sélecteur créé sera .icons-twitter.
+    .#{$selector} {
+      @extend %x-sprites-dimensions-#{$cache-key};
+    }
+  }
+}

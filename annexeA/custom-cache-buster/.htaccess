@@ -1,0 +1,5 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteRule ^(.+)-\d+\.(png|jpe?g|gif|svg)$ $1.$2 [NC,L]
+</IfModule>

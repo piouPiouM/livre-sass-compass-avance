@@ -1,0 +1,10 @@
+// Configurer la position des sprites CSS
+// ======================================
+// (page 195)
+
+@import "compass/utilities/sprites";
+
+$html5-large-position: 50%;
+$html5-large-logo-position: 100%;
+@import "html5-large/*.png";
+@include all-html5-large-sprites;

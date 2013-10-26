@@ -1,0 +1,25 @@
+// Ajout d'un groupe de règles imbriquées
+// ======================================
+// (page 71)
+
+// Le composant de base.
+.widget {
+  padding: .5em 2.5em;
+  overflow: hidden;
+  h2, h3 {
+    margin-bottom: 1.5em;
+  }
+  img {
+    float: left;
+  }
+}
+
+// Un composant plus spécifique.
+.widget-specific {
+@extend .widget;
+  border: 1px solid #c1c1c1;
+}
+// Un autre composant plus spécifique.
+.widget-new {
+  @extend .widget; background-color: #c1c1c1;
+}

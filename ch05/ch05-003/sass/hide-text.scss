@@ -1,0 +1,14 @@
+// Masquer un texte à l'aide de Compass
+// ====================================
+// (page 166)
+
+@import "compass/typography/text/replacement";
+
+$logo: 'logo.png';
+.logo {
+  display: block;
+  @include hide-text;
+  background: transparent image-url($logo) no-repeat 0 0;
+  height: image-height($logo);
+  width: image-width($logo);
+}

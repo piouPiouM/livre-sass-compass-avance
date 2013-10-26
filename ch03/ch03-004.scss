@@ -1,0 +1,31 @@
+// Fonctions personnalisées
+// ========================
+// (page 121)
+
+// Taille de base du texte.
+$base-font-size: 16px !default;
+
+// Convertir l'unité en px $to en unité relative em par rapport
+// à la taille en pixel du $context courant.
+@function x-em($to, $context: $base-font-size) {
+  // Éviter une erreur de syntaxe en l'absence d'unité sur l'un des
+  // deux arguments.
+  @if unitless($to)      { $to: $to + 0px; }
+  @if unitless($context) { $context: $context + 0px; }
+
+  // Le résultat de la division de composants d'une même unité
+  // retourne une valeur dépourvue d'unité. Il suffit alors d'ajouter
+  // 0em pour réaliser la conversion.
+  @return $to / $context + 0em;
+}
+
+h1 {
+  font-size: x-em(72);       // L'argument est dépourvu d'unité.
+  margin-bottom: x-em(48px); // L'unité est précisée.
+  small {
+    // L'élément imbriqué doit avoir une taille de police de 48px.
+    // Du fait de la cascade CSS, nous devons définir pour taille de
+    // base les 72px de son parent.
+    font-size: x-em(48px, 72);
+  }
+}

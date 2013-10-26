@@ -1,0 +1,8 @@
+// Premiers sprites CSS
+// ====================
+// (page 192)
+
+@import "compass/utilities/sprites";
+
+@import "html5/*.png";
+@include all-html5-sprites;

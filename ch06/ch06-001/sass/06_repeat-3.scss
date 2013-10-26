@@ -1,0 +1,12 @@
+// Répétition horizontalle parfaite d'un sprite CSS
+// ================================================
+// (page 199)
+
+@import "compass/utilities/sprites";
+
+$rx3-pattern-repeat: repeat-x;
+@import "rx3/*.png";
+@include all-rx3-sprites;
+.rx-pattern {
+  background-repeat: repeat-x;
+}

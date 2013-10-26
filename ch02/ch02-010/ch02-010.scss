@@ -1,0 +1,21 @@
+// Combiner argument et liste d'arguments
+// ======================================
+// (page 64)
+
+@mixin background($fallback-bg, $backgrounds...) {
+  background: $fallback-bg; // Compatibilité avec les anciens navigateurs
+  background: $backgrounds;
+}
+
+.weather {
+  width: 200px;
+  height: 200px;
+  @include background(
+    // Compatibilité avec les anciens navigateurs.
+    url("img/weather.png") no-repeat 0 0,
+    // Navigateurs récents.
+    url("img/light-cloud.png") no-repeat right 90px,
+    url("img/sun.png") no-repeat 50% 50%,
+    url("img/dark-cloud.png") no-repeat left center
+  );
+}

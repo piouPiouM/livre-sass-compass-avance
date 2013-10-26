@@ -1,0 +1,13 @@
+// Déclarer une variable globale Sass
+// ==================================
+// (page 40)
+
+// Déclaration d'une variable globale.
+$highlight-color: #ff7100;
+.warning {
+  color: $highlight-color;
+}
+.warning-title {
+  color: #fff;
+  background-color: $highlight-color;
+}

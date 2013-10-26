@@ -1,0 +1,69 @@
+// Exemple 3 : des sprites CSS en haute définition
+// ===============================================
+// (page 217)
+
+@import "compass";
+
+// ## Gestion des images classiques
+
+$social-sprite-base-class: '%social_base';
+$social-layout: smart;
+
+// Le tri est forcé par nom, pour s'assurer du bon ordre des images dans
+// la sprite map.
+$social-sort-by: name;
+
+// Dans cet exemple, les images ont des dimensions différentes.
+// Nous devons les préciser pour chacune d'entre elles.
+$social-sprite-dimensions: true;
+
+// Utilisation des sprites magiques pour les images classiques et
+// sauvegarde sur le disque de la sprite map classique.
+@import "social/*.png";
+ 
+// Nous demandons à Compass de générer les règles CSS pour chacune des
+// images classiques.
+@include all-social-sprites;
+
+// Les propriétés communes à tous les sprites sont regroupées ici.
+// Nous réutilisons la variable de configuration de la classe de base
+// pour que Compass l'étende automatiquement. Elle est interpolée pour
+// que Sass ne génère pas d'erreur (voir chapitre 2).
+// Note : la variable $<map>-sprite-base-class est créée par le module
+// automatique de sprites même si vous ne la personnalisez pas.
+#{$social-sprite-base-class} {
+  @include hide-text;
+  display: block;
+}
+
+// ## Gestion des images Haute définition
+
+// Nous ne voulons pas que Compass génère les sélecteurs CSS des sprites
+// donc nous gérons manuellement la création de la sprite-map.
+// Afin de s'assurer la bonne correspondance de l'ordre des images entre
+// les deux sprite map, il est important de réutiliser les options
+// utilisées pour créer la sprite map classique.
+$social_hd-sprites: sprite-map("social_x2/*.png",
+                               $layout: $social-layout,
+                               $sort-by: $social-sort-by);
+
+// Les surcharges HD sont déclarées dans une Media Query qui cible les
+// écrans à haute densité.
+@media (-webkit-min-device-pixel-ratio: 1.3),
+       (min-resolution: 124.8dpi),
+       (min-resolution: 1.3dppx) {
+  // Les surcharges concernent tous les sprites. Le module de sprites
+  // étendra automatiquement la classe de base déclarée ci-dessous.
+  #{$social-sprite-base-class} {
+    // Nous déclarons l'image de la sprite map HD comme fond des
+    // éléments.
+    // Note : Compass sauvegarde sur le disque la sprite map HD.
+    background-image: $social_hd-sprites;
+    // Puisque l'image HD est plus grande que l'image classique, nous
+    // précisons une largeur d'image égale à celle de la sprite map
+    // classique. Pour ce faire, nous utilisons la variable
+    // $<map>-sprites que Compass a créé lors de l'importation des
+    // images classique : $social-sprites.
+    background-size: sprite-width($social-sprites) auto;
+  }
+}

@@ -1,0 +1,17 @@
+// Plusieurs niveaux d'imbrication
+// ===============================
+// (page 30)
+
+nav, .menu {
+  background-color: #fefefe;
+  ul, ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+      a, .link {
+        color: blue;
+      }
+    }
+  }
+}

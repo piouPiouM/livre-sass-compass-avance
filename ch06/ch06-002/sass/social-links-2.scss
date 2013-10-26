@@ -1,0 +1,25 @@
+// Optimiser l'approche pour afficher des icônes en liste
+// ======================================================
+// (page 207)
+
+@import "compass";
+
+// Afficher une liste horizontale.
+.list-inline { @include horizontal-list; }
+
+// Création des sprites CSS pour les images du dossier social/.
+$social-layout: smart;            // Agencement intelligent.
+$social-sprite-dimensions: false; // Ne pas ajouter les dimensions.
+@import "social/*.png";           // Créer la sprite map.
+@include all-social-sprites;      // Créer les classes des sprites.
+
+[class*="social-"] {
+  @include hide-text;
+  @include opacity(.5);
+  display: block;
+  // Ajouter les dimensions d’une des images.
+  @include social-sprite-dimensions('twitter');
+  &:hover {
+    @include opacity(1);
+  }
+}
